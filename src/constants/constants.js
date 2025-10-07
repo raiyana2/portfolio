@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: 'MERN Memories',
-    description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+    title: 'Sentio-The Ultimate Mood Tracking App',
+    description: "Sentio is a Android app designed to help friends and family stay connected through mood sharing. With detailed mood events that include photos, personal reflections, geolocation tags, and more, users can capture their emotional journey and share it with those who matter most. Whether you're having a great day or a tough one, you can log your mood with a photo, a short message, even your location, whatever helps tell your story.",
       image: '/images/1.png',
       tags: ['Mongo', 'Express', 'React', 'Node'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    source: 'https://github.com/cmput301-w25/Sentio-The-Ultimate-Mood-Tracking-App',
+    visit: 'https://github.com/cmput301-w25/Sentio-The-Ultimate-Mood-Tracking-App',
     id: 0,
   },
   {
