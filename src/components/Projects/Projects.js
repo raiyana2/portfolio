@@ -1,8 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
+
 
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
+
+const isExternal = (url='') =>
+  url.startsWith('http://') || url.startsWith('https://') || url.startsWith('mailto:') || url.startsWith('tel:');
 
 const Projects = () => (
   <Section nopadding id="projects">
@@ -31,8 +36,23 @@ const Projects = () => (
             </TagList>  
           </div>
           <UtilityList>
-            <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={source}>Source</ExternalLinks>
+            {/* visit */}
+            {visit && (isExternal(visit)
+              ? <ExternalLinks href={visit} target="_blank" rel="noopener noreferrer">Learn More</ExternalLinks>
+              : (
+                <Link href={visit} legacyBehavior>
+                  <ExternalLinks>Learn More</ExternalLinks>
+                </Link>
+              ))}
+
+            {/* source */}
+            {source && (isExternal(source)
+              ? <ExternalLinks href={source} target="_blank" rel="noopener noreferrer">Code</ExternalLinks>
+              : (
+                <Link href={source} legacyBehavior>
+                  <ExternalLinks>Code</ExternalLinks>
+                </Link>
+              ))}
           </UtilityList>
         </BlogCard>
     ))}

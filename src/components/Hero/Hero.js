@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
@@ -17,7 +19,9 @@ const Hero = (props) => (
         I am a computer science student at the University of Alberta. I love to create full stack applications and learn about new technologies.
       </SectionText>
 
-      <Button onClick={() => window.location = '#projects'}>Learn More</Button>
+      <Link href="/#projects" legacyBehavior passHref>
+  <Button as="a">Learn More</Button>
+</Link>
 
     </LeftSection>
   </Section>
